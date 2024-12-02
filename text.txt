@@ -1,0 +1,102 @@
+
+/*
+|--------------------------------------------------------------------------
+| Traffic Light API Routes
+|--------------------------------------------------------------------------
+|
+| POST https://musab.link/api/traffic-light/status
+| Updates the operational status (on/off) of a specific traffic light
+| Requires: traffic_light_id, status
+| Used by: Microcontrollers to report status changes
+|
+| POST https://musab.link/api/traffic-light/color
+| Sets the current color of a traffic light and its timing
+| Requires: traffic_light_id, color, time_limit (optional)
+| Used by: AI system to control light changes
+|
+| POST https://musab.link/api/traffic-light/car-count
+| Updates the count of cars waiting at a traffic light
+| Requires: traffic_light_id, count
+| Used by: Sensors to report real-time traffic volume
+|
+| GET https://musab.link/api/traffic-light/{id}
+| Retrieves details for a specific traffic light by ID
+| Returns: Full traffic light object with current state
+| Used by: Dashboard and monitoring systems
+|
+| GET https://musab.link/api/traffic-lights
+| Lists all traffic lights in the system
+| Returns: Array of all traffic light objects
+| Used by: Admin dashboard for system overview
+*/
+
+
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider and all of them will
+| be assigned to the "web" middleware group. Make something great!
+|
+| Main Routes:
+| - https://musab.link/ : Redirects to traffic light index page
+| - https://musab.link/traffic-light : Shows overview of all traffic lights
+| - https://musab.link/home : Dashboard home page
+|
+| Authentication:
+| - Login routes enabled
+| - Registration disabled for security
+| - Protected by auth middleware
+| - Default login:
+|   Email: admin@admin.com
+|   Password: password
+|
+| Note: All admin routes require authentication
+*/
+
+
+
+
+
+// API Test JSON
+// setStatus
+    /*
+    {
+        "api_token":"4ae3c559b331da85a0038b337bb9972464df69895292272e6a3661a0cea84f28",
+        "traffic_light_id": 1,
+        "status": "on"
+    }
+    // Usage: POST request to https://musab.link/api/traffic-light/status
+    // Sets the status of traffic light with ID 1 to "on"
+    */
+
+    // getSystemStatuses
+    /*
+    // No JSON body needed. Use GET request to https://musab.link/api/traffic-light/system-statuses/{id}
+    // Example: GET https://musab.link/api/traffic-light/system-statuses/1
+    // Retrieves system statuses for traffic light with ID 1
+    */
+
+    // setLightColor
+    /*
+    {
+        "api_token":"4ae3c559b331da85a0038b337bb9972464df69895292272e6a3661a0cea84f28",
+        "traffic_light_id": 1,
+        "color": "green"
+    }
+    // Usage: POST request to https://musab.link/api/traffic-light/color
+    // Sets the color of traffic light with ID 1 to "green"
+    */
+
+    // carCount
+    /*
+    {
+        "api_token":"4ae3c559b331da85a0038b337bb9972464df69895292272e6a3661a0cea84f28",
+        "traffic_light_id": 1,
+        "count": 5
+    }
+    // Usage: POST request to https://musab.link/api/traffic-light/car-count
+    // Sets the car count for traffic light with ID 1 to 5
+    */
