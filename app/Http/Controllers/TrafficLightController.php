@@ -13,6 +13,7 @@ class TrafficLightController extends Controller
     public function setStatus(Request $request)
     {
         $request->validate([
+            'traffic_light_id'=> 'required|integer',
             'status' => 'required|string|in:on,off',
         ]);
 
@@ -79,7 +80,7 @@ class TrafficLightController extends Controller
             return response()->json(['message' => 'Traffic light not found'], 404);
             }
 
-        $trafficLight->car_count = $request->count;
+        $trafficLight->current_car_count = $request->count;
         $trafficLight->save();
 
         return response()->json(['message' => 'Car count set'], 200);

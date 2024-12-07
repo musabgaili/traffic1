@@ -1,0 +1,25 @@
+Edit Status "ON, OFF"
+https://traffic.musab.link/api/traffic-light/status
+request shape 
+{
+    "api_token":"4ae3c559b331da85a0038b337bb9972464df69895292272e6a3661a0cea84f28",
+    "traffic_light_id":1,
+    "status":"off"
+}
+
+Edit Color 
+https://traffic.musab.link/api/traffic-light/color
+{
+    "api_token":"4ae3c559b331da85a0038b337bb9972464df69895292272e6a3661a0cea84f28",
+    "traffic_light_id":1,
+    "color":"red"
+}
+
+
+Edit Car Count 
+https://traffic.musab.link/api/traffic-light/car-count
+{
+    "api_token":"4ae3c559b331da85a0038b337bb9972464df69895292272e6a3661a0cea84f28",
+    "traffic_light_id":1,
+    "count":12
+}
