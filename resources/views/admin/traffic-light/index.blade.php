@@ -46,7 +46,8 @@
                                             {{ucfirst($trafficLight->color)}}
                                         </span>
                                     </p>
-                                    <p><strong>Time Limit:</strong> {{$trafficLight->lightColors()->latest()->first()->time_limit}} seconds</p>
+                                    {{-- Delete the Next Line --}}
+                                    {{-- <p><strong>Time Limit:</strong> {{$trafficLight->lightColors()->latest()->first()->time_limit}} seconds</p> --}}
                                 </div>
                             </div>
                         </div>
